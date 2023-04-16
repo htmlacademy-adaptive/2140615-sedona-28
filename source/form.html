@@ -37,15 +37,109 @@
   <!--Форма поиска-->
 
   <main class="main-container">
-    <div class="page-hero">
+    <h1 class="visually-hidden">Форма отзыва</h1>
+    <section class="page-hero">
+      <h2 class="visually-hidden">Приветствие</h2>
       <img class="page-hero__background" src="./img/placeholder-mobile.jpg" width="320" height="389" alt="Горы.">
-      <img class="page-hero__greetings" src="./img/SEDONA.svg" width="229" height="39" alt="Sedona." style="background-color: aqua;">
+      <img class="page-hero__greetings" src="./img/SEDONA.svg" width="229" height="39" alt="Sedona."
+        style="background-color: aqua;">
       <!--фон добавлен временно для наглядности-->
-    </div>
-    <section class="form">
-      <h1 class="form__title title">Оставьте свой отзыв</h1>
-      <p class="form__description description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+    </section>
+    <section class="form-container">
+      <h2 class="form-container__title title">Оставьте свой отзыв</h2>
+      <p class="form-container__description description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а
+        также о посещенных вами достопримечательностях</p>
+      <form class="form-container__form form" action="https://echo.htmlacademy.ru/" method="get">
+        <fieldset class="form__group form-group form-group--name">
+          <legend class="form-group__title title">Представьтесь:</legend>
+          <p class="form-group__item form-item">
+            <label class="form-item__label form-item__label--firstname" for="firstname">Имя*:</label>
+            <input class="form-item__input form-item__input--firstname" type="text" name="firstname" id="firstname"
+              placeholder="Пётр" required>
+          </p>
+          <p class="form-group__item form-item">
+            <label class="form-item__label form-item__label--secondname" for="secondname">Фамилия*:</label>
+            <input class="form-item__input form-item__input--secondname" type="text" name="secondname" id="secondname"
+              placeholder="Пустота" required>
+          </p>
+          <p class="form-group__item form-item">
+            <label class="form-item__label form-item__label--patronymic" for="patronymic">Отчество*:</label>
+            <input class="form-item__input form-item__input--patronymic" type="text" name="patronymic" id="patronymic"
+              placeholder="Викторович" required>
+          </p>
+        </fieldset>
+        <fieldset class="form__group form-group form-group--contacts">
+          <legend class="form-group__title title">Контактная информация:</legend>
+          <p class="form-group__item form-item">
+            <label class="form-item__label form-item__label--phone" for="phone">Контактный телефон*:</label>
+            <input class="form-item__input form-item__input--phone" type="tel" name="phone" id="phone"
+              placeholder="Введите телефон" required>
+          </p>
+          <p class="form-group__item form-item">
+            <label class="form-item__label form-item__label--email" for="email">Электронная почта*:</label>
+            <input class="form-item__input form-item__input--email" type="email" name="email" id="email"
+              placeholder="Введите e-mail" required>
+          </p>
+        </fieldset>
+        <fieldset class="form__group form-group form-group--impression">
+          <legend class="form-group__title title">Ваше Общее впечатление:</legend>
+          <ul class="form-group__list form-list">
+            <li class="form-group__item form-item">
+              <label class="form-item__label form-item__label--positive" for="positive">
+                <input class="form-item__input visually-hidden" type="radio" name="impression" value="positive"
+                  id="positive" checked>
+                <span class="form-item__radio"></span>
+                <span class="form-item__text">Скорее положительное</span>
+              </label>
+            </li>
+            <li class="form-group__item form-item">
+              <label class="form-item__label form-item__label--negative" for="negative">
+                <input class="form-item__input visually-hidden" type="radio" name="impression" value="negative"
+                  id="negative">
+                <span class="form-item__radio"></span>
+                <span class="form-item__text">Скорее отрицательное</span>
+              </label>
+            </li>
+            <li class="form-group__item form-item">
+              <label class="form-item__label form-item__label--neutral" for="neutral">
+                <input class="form-item__input visually-hidden" type="radio" name="impression" value="neutral"
+                  id="neutral">
+                <span class="form-item__radio"></span>
+                <span class="form-item__text">Затрудняюсь ответить</span>
+              </label>
+          </ul>
+        </fieldset>
+        <fieldset class="form__group form-group form-group--impression">
+          <legend class="form-group__title title">Ваше Общее впечатление:</legend>
+          <ul class="form-group__list form-list">
+            <li class="form-group__item form-item">
+              <label class="form-item__label form-item__label--Bridge" for="Bridge">
+                <input class="form-item__input visually-hidden" type="checkbox" name="Devil's Bridge" value="positive"
+                  id="Bridge" checked>
+                <span class="form-item__mark"></span>
+                <span class="form-item__text">Скорее положительное</span>
+              </label>
+            </li>
+            <li class="form-group__item form-item">
+              <label class="form-item__label form-item__label--negative" for="negative">
+                <input class="form-item__input visually-hidden" type="checkbox" name="impression" value="negative"
+                  id="negative">
+                <span class="form-item__mark"></span>
+                <span class="form-item__text">Скорее отрицательное</span>
+              </label>
+            </li>
+            <li class="form-group__item form-item">
+              <label class="form-item__label form-item__label--neutral" for="neutral">
+                <input class="form-item__input visually-hidden" type="checkbox" name="impression" value="neutral"
+                  id="neutral">
+                <span class="form-item__mark"></span>
+                <span class="form-item__text">Затрудняюсь ответить</span>
+              </label>
+          </ul>
+        </fieldset>
 
+
+      </form>
 
 
 
