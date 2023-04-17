@@ -109,41 +109,50 @@
               </label>
           </ul>
         </fieldset>
-        <fieldset class="form__group form-group form-group--impression">
-          <legend class="form-group__title title">Ваше Общее впечатление:</legend>
+        <fieldset class="form__group form-group form-group--attractions">
+          <legend class="form-group__title title">Посещенные достопримечательности:</legend>
           <ul class="form-group__list form-list">
             <li class="form-group__item form-item">
-              <label class="form-item__label form-item__label--Bridge" for="Bridge">
-                <input class="form-item__input visually-hidden" type="checkbox" name="Devil's Bridge" value="positive"
-                  id="Bridge" checked>
+              <label class="form-item__label" for="devil-bridge">
+                <input class="form-item__input visually-hidden" type="checkbox" name="devil-bridge" id="devil-bridge"
+                  checked>
                 <span class="form-item__mark"></span>
-                <span class="form-item__text">Скорее положительное</span>
+                <span class="form-item__text">Мост Дьявола</span>
               </label>
             </li>
             <li class="form-group__item form-item">
-              <label class="form-item__label form-item__label--negative" for="negative">
-                <input class="form-item__input visually-hidden" type="checkbox" name="impression" value="negative"
-                  id="negative">
+              <label class="form-item__label" for="mount-bell">
+                <input class="form-item__input visually-hidden" type="checkbox" name="mount-bell" id="mount-bell"
+                  checked>
                 <span class="form-item__mark"></span>
-                <span class="form-item__text">Скорее отрицательное</span>
+                <span class="form-item__text">Гора-Колокол</span>
               </label>
             </li>
             <li class="form-group__item form-item">
-              <label class="form-item__label form-item__label--neutral" for="neutral">
-                <input class="form-item__input visually-hidden" type="checkbox" name="impression" value="neutral"
-                  id="neutral">
+              <label class="form-item__label" for="slide-park">
+                <input class="form-item__input visually-hidden" type="checkbox" name="slide-park" id="slide-park"
+                  checked>
                 <span class="form-item__mark"></span>
-                <span class="form-item__text">Затрудняюсь ответить</span>
+                <span class="form-item__text">Слайд-парк</span>
               </label>
+            </li>
+            <li class="form-group__item form-item">
+              <label class="form-item__label" for="red-rocks">
+                <input class="form-item__input visually-hidden" type="checkbox" name="red-rocks" id="red-rocks">
+                <span class="form-item__mark"></span>
+                <span class="form-item__text">Красные скалы</span>
+              </label>
+            </li>
           </ul>
         </fieldset>
-
-
+        <label class="form__group form-group form-group--emotions" for="red-rocks">
+          <legend class="form-group__title title">Опишите свои эмоции:</legend>
+          <textarea name="comment" id="comment-field" rows="4"
+            placeholder="Опишите подробно все свои восторги"></textarea>
+        </label>
+        <button class="form__button button">Отправить отзыв</button>
+        <span class="form-required">Обязательные поля</span>
       </form>
-
-
-
-
     </section>
   </main>
 
@@ -179,6 +188,25 @@
       </svg>
     </a>
   </footer>
+
+  <!--Модальные окна-->
+
+  <div class="modal-error">
+    <h2 class="modal-error__title title">Что-то пошло не так!</h2>
+    <p class="modal-error__description description">Проверьте поля, выделенные красным, скорее всего вы забыли их
+      заполнить</p>
+    <button class="modal-error__button button">Ок</button>
+  </div>
+
+  <div class="modal-error">
+    <h2 class="modal-error__title title">Ваш отзыв отправлен!</h2>
+    <p class="modal-error__description description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее
+      время мы опубликуем его на сайте.</p>
+    <div class="modal-error__button-container">
+      <button class="modal-error__button button">Закрыть окно</button>
+    </div>
+  </div>
+
 </body>
 
 </html>
